@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report an Item - Campus Lost and Found</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Campus Lost and Found System</h1>
+        <p style="font-style: italic;"> A lost or found item.</p>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report.html">Report an Item</a>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section>
+
+            <h2>Report an Item</h2>
+
+            <p>Please complete the form below.</p>
+
+            <form id="reportForm" action="process.php" method="post">
+
+                <!-- Full Name -->
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text"
+                           id="fullName"
+                           name="full_name">
+                </div>
+
+                <br>
+
+                <!-- Email -->
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email"
+                           id="email"
+                           name="email">
+                </div>
+
+                <br>
+
+                <!-- Report Type -->
+                <fieldset>
+
+                    <legend>Report Type:</legend>
+
+                    <input type="radio"
+                           id="lost"
+                           name="report_type"
+                           value="Lost">
+
+                    <label for="lost">Lost</label>
+
+
+                    <input type="radio"
+                           id="found"
+                           name="report_type"
+                           value="Found">
+
+                    <label for="found">Found</label>
+
+                    <!-- Third DOM -->
+                    <P id="reportTypeMessage" aria-live="polite"></P>
+
+                </fieldset>
+
+                <br>
+
+                <!-- Item Name -->
+                <div>
+                    <label for="itemName">Item Name:</label>
+
+                    <input type="text"
+                           id="itemName"
+                           name="item_name">
+                           <p>Preview: <span id="itemPreview">No item entered</span></p>
+                </div>
+
+                <br>
+
+                <!-- Category -->
+                <div>
+
+                    <label for="category">Category:</label>
+
+                    <select id="category" name="category">
+
+                        <option value="">Select a category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Documents">Documents</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+            </div><br>
+
+
+                <!-- Location -->
+                <div>
+                    <label for="location">Location:</label>
+
+                    <input type="text"
+                           id="location"
+                           name="location">
+                </div>
+
+                <br>
+
+                <!-- Date -->
+                <div>
+                    <label for="itemDate">Date Lost or Found:</label>
+
+                    <input type="date"
+                           id="itemDate"
+                           name="item_date">
+                </div>
+
+                <br>
+
+                <!-- Description -->
+                <!-- Description -->
+<div>
+    <label for="description">Item Description:</label>
+    <br>
+
+    <textarea id="description"
+              name="description"
+              rows="5"
+              cols="40"
+              maxlength="300"></textarea>
+
+    <p>
+        <span id="characterCount">0</span>/300 characters
+    </p>
+</div>
+
+                <!-- Validation messages -->
+                <div id="formMessage" aria-live="polite"></div>
+
+                <br>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Report</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Campus Lost and Found System</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
