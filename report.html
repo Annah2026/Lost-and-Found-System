@@ -9,40 +9,29 @@
     </head>
 <body>  
 
-<!-- Header --> 
-
 <header>        
     <h1>Campus Lost and Found System</h1>        
     <p style="font-style: italic;"> A lost or found item.</p>   
-</header>  
-
-<!-- Navigation -->    
+</header>     
   <nav>       
     <a href="index.html">Home</a>        
     <a href="report.html">Report an Item</a>    
-  </nav>    
-<!-- Main Content -->    
+  </nav>      
 <main>        
     <section>            
      <h2>Report an Item</h2>           
        <p>Please complete the form below.</p> 
         <form id="reportForm" action="process.php" method="post">  
-                    
-<!-- Full Name -->                
+                                   
 <div>                    
     <label for="fullName">Full Name:</label>                   
     <input type="text" id="fullName" name="full_name" required>                
-</div>                
-<br> 
-
-<!-- Email -->                
+</div>                <br>               
 <div>                    
     <label for="email">Email Address:</label>                    
     <input type="email" id="email" name="email" required>                
 </div>                
-<br>   
-
-<!-- Report Type -->                
+<br>                   
     <fieldset>                    
         <legend>Report Type:</legend>                    
         <input type="radio" id="lost" name="report_type" value="Lost" required>                    
@@ -50,20 +39,15 @@
         <input type="radio" id="found" name="report_type" value="Found">                    
         <label for="found">Found</label>                    
            
-<!-- Third DOM -->                    
     <p id="reportTypeMessage" aria-live="polite"></p>                
     </fieldset>                
-        <br> 
-
-<!-- Item Name -->                
+        <br>                
     <div>                    
             <label for="itemName">Item Name:</label>                    
             <input type="text" id="itemName" name="item_name" required>                           
          <p>Preview: <span id="itemPreview">No item entered</span></p>                
         </div>                
-        <br>  
-
-<!-- Category -->                
+        <br>                
 <div>                    
     <label for="category">Category:</label>                    
     <select id="category" name="category" required>                        
@@ -79,26 +63,19 @@
     <label for="otherCategory">Specify Category:</label>
     <input type="text" id="otherCategory" name="other_category">
 </div>          
-</div>
-<br>
-
-<!-- Location -->               
-<div>                    
+<br              
+<div>                  
     <label for="location">Location:</label>                    
     <input type="text" id="location" name="location" required>               
 </div>                
-<br>                
-                         
-<!-- Date -->                                         
-<div>                    
+<br>             
+<form>                 
                             
     <label for="itemDate">Date Lost or Found:</label>                    
                             
     <input type="date" id="itemDate" name="item_date" required>                
-</div>                
-<br> 
-
-<!-- Description -->                
+</div>                <br> 
+               
 <div>    
     <label for="description">Item Description:</label>    
 <br>    
@@ -112,12 +89,9 @@
     
         <p>        <span id="characterCount">0</span>/300 characters    </p>
 </div>  
-
-<!-- Validation messages -->                
+                
       <div id="formMessage" class="message" aria-live="polite"></div>           
-    <br>
-
-<!-- Submit Button -->                
+    <br>             
  <button type="submit">Submit Report</button>            
 </form>        
 </section>    
@@ -125,10 +99,8 @@
 
 <!-- Footer -->    
  <footer>        
-    <p>&copy; 2026 Campus Lost and Found System</p>    
-</footer> 
-
-<!-- JavaScript -->    
+    <p>2026 Campus Lost and Found System</p>    
+</footer>    
  <script src="script.js"></script>
 </body>
 </html>
